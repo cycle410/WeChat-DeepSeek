@@ -86,6 +86,6 @@ npx WeChat-DeepSeek
 - Bot 仅接收用户主动发送的消息，无法监听群聊或冒充个人号
 - 所有数据本地处理，不经过第三方
 - 支持 iOS 微信 8.0.70 以上及安卓平台
-- **系统提示词是通用助手版**。想换成自己的人设，直接改 `lib/ai.mjs` 里的 `SYSTEM_PROMPT`，但**不要提交到公开仓库**（改完把 `lib/ai.mjs` 加进 `.git/info/exclude`，或用 `git update-index --skip-worktree lib/ai.mjs`）
+- **系统提示词是通用助手版**。想换成自己的人设，直接改 `lib/ai.mjs` 里的 `SYSTEM_PROMPT`
 - `.config/` 永远不入库：里面有微信登录 token、API Key、对话历史
 
