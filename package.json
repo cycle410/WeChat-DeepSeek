@@ -1,0 +1,29 @@
+{
+  "name": "WeChat-DeepSeek",
+  "version": "0.2.0",
+  "description": "WeChat-DeepSeek — A WeChat AI bot powered by DeepSeek API.",
+  "type": "module",
+  "bin": {
+    "WeChat-DeepSeek": "bin/WeChat-DeepSeek.mjs"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cycle410/WeChat-DeepSeek.git"
+  },
+  "homepage": "https://github.com/cycle410/WeChat-DeepSeek#readme",
+  "keywords": [
+    "weixin", "wechat", "bot", "chatbot", "ai",
+    "deepseek", "ilink", "cli"
+  ],
+  "author": "cycle410",
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
