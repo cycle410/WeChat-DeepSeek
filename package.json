@@ -1,6 +1,6 @@
 {
   "name": "WeChat-DeepSeek",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "WeChat-DeepSeek — A WeChat AI bot powered by DeepSeek API.",
   "type": "module",
   "bin": {

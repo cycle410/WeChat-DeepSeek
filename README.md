@@ -26,6 +26,16 @@ npx WeChat-DeepSeek
 2. **环境变量** — `DEEPSEEK_API_KEY`
 3. **配置文件** — `.config/config.json`（首次交互式配置自动生成）
 
+`.config/config.json` 里可用的字段：
+
+| 字段 | 默认值 | 说明 |
+|------|--------|------|
+| `model` | `deepseek-chat` | 模型名，如 `deepseek-v4-flash` |
+| `baseUrl` | `https://api.deepseek.com/v1` | 接口地址 |
+| `thinking` | 未设（跟随服务端，开启） | 设为 `"disabled"` 关闭思考模式：同一问题实测 107 → 38 token，更快更省 |
+| `maxTokens` | `4096` | 单次回复上限；思考开着时，思考也算在这个额度里 |
+| `timeoutMs` | `120000` | 单次请求超时（毫秒） |
+
 ---
 
 ## 特性
@@ -33,8 +43,10 @@ npx WeChat-DeepSeek
 - 微信官方 iLink Bot API，非 hook，零封号风险
 - API 密钥 AES-256-CBC 加密存储，绑定本机
 - Session 过期自动重连，指数退避，最多 5 次
-- 对话历史持久化，支持 `/clear` 清空
+- 对话历史持久化，支持 `/clear` 清空、`/历史` 查概况
 - 每用户限流：3 秒冷却 + 每分钟 10 条
+- 思考模式可关（`thinking: "disabled"`），同一问题省约 60% token
+- 配置文件带 BOM 也能读，用记事本改配置不会失效
 - 零外部依赖，仅需 Node.js 18+
 
 ---
@@ -44,6 +56,7 @@ npx WeChat-DeepSeek
 | 命令 | 功能 |
 |------|------|
 | `/clear` | 清空对话历史 |
+| `/历史` | 查看当前对话历史概况（条数 / 字数） |
 | `/help` | 显示帮助 |
 | `/ping` | 检查在线状态 |
 | `/status` | 运行状态概览 |
